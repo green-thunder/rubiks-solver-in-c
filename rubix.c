@@ -245,6 +245,7 @@ int Dn(){
 }
 
 int main(){
+    printf("\n\t\t\t\twhite----1\n\t\t\t\torange---2\n\t\t\t\tyellow---3\n\t\t\t\tred------4\n\t\t\t\tgreen----5\n\t\t\t\tblue-----6\n");
     while(1){
         for(i=1;i<=3;i++){
             for(i2=1;i2<=3;i2++){
@@ -288,7 +289,7 @@ int main(){
             Dn(); Rn(); D(); R();
             printf("D` R` D R "); 
         }
-        }else if(o[2][2]==2 || y)
+        }else if(o[2][2]==2 || y){}
     }
     return 0;
 }
