@@ -47,10 +47,10 @@ int Rn(){
 int F(){
     for(i=0;i<3;i++){
         yordamchi=r[i][2];
-        r[i][2]=b[i][2];
-        b[i][2]=o[i][2];
-        o[i][2]=g[i][2];
-        g[i][2]=yordamchi;
+        r[i][2]=b[0][i];
+        b[0][i]=o[2-i][0];
+        o[2-i][0]=g[2][2-i];
+        g[2][2-i]=yordamchi;
     }
     yordamchi=w[0][0];
     w[0][0]=w[2][0];
@@ -67,10 +67,10 @@ int F(){
 int Fn(){
     for(i=0;i<3;i++){
         yordamchi=r[i][2];
-        r[i][2]=g[i][2];
-        g[i][2]=o[i][2];
-        o[i][2]=b[i][2];
-        b[i][2]=yordamchi;
+        r[i][2]=g[2][2-i];
+        g[2][2-i]=o[2-i][0];
+        o[2-i][0]=b[0][i];
+        b[0][i]=yordamchi;
     }
     yordamchi=w[0][0];
     w[0][0]=w[0][2];
@@ -86,11 +86,11 @@ int Fn(){
 
 int L(){
     for(i=0;i<3;i++){
-        yordamchi=y[i][2];
-        y[i][2]=b[i][2];
-        b[i][2]=w[i][2];
-        w[i][2]=g[i][2];
-        g[i][2]=yordamchi;
+        yordamchi=y[2-i][0];
+        y[2-i][0]=b[2-i][0];
+        b[2-i][0]=w[2-i][0];
+        w[2-i][0]=g[2-i][0];
+        g[2-i][0]=yordamchi;
     }
     yordamchi=r[0][0];
     r[0][0]=r[2][0];
@@ -106,11 +106,11 @@ int L(){
 
 int Ln(){
     for(i=0;i<3;i++){
-        yordamchi=y[i][2];
-        y[i][2]=g[i][2];
-        g[i][2]=w[i][2];
-        w[i][2]=b[i][2];
-        b[i][2]=yordamchi;
+        yordamchi=y[2-i][0];
+        y[2-i][0]=g[2-i][0];
+        g[2-i][0]=w[2-i][0];
+        w[2-i][0]=b[2-i][0];
+        b[2-i][0]=yordamchi;
     }
     yordamchi=r[0][0];
     r[0][0]=r[0][2];
@@ -127,10 +127,10 @@ int Ln(){
 int B(){
     for(i=0;i<3;i++){
         yordamchi=o[i][2];
-        o[i][2]=b[i][2];
-        b[i][2]=r[i][2];
-        r[i][2]=g[i][2];
-        g[i][2]=yordamchi;
+        o[i][2]=b[2][2-i];
+        b[2][2-i]=r[2-i][0];
+        r[2-i][0]=g[0][i];
+        g[0][i]=yordamchi;
     }
     yordamchi=y[0][0];
     y[0][0]=y[2][0];
@@ -147,10 +147,10 @@ int B(){
 int Bn(){
     for(i=0;i<3;i++){
         yordamchi=o[i][2];
-        o[i][2]=g[i][2];
-        g[i][2]=r[i][2];
-        r[i][2]=b[i][2];
-        b[i][2]=yordamchi;
+        o[i][2]=g[0][i];
+        g[0][i]=r[2-i][0];
+        r[2-i][0]=b[2][2-i];
+        b[2][2-i]=yordamchi;
     }
     yordamchi=y[0][0];
     y[0][0]=y[0][2];
@@ -166,11 +166,11 @@ int Bn(){
 
 int U(){
     for(i=0;i<3;i++){
-        yordamchi=o[i][2];
-        o[i][2]=y[i][2];
-        y[i][2]=r[i][2];
-        r[i][2]=w[i][2];
-        w[i][2]=yordamchi;
+        yordamchi=o[0][i];
+        o[0][i]=y[2][2-i];
+        y[2][2-i]=r[0][i];
+        r[0][i]=w[0][i];
+        w[0][i]=yordamchi;
     }
     yordamchi=g[0][0];
     g[0][0]=g[2][0];
@@ -186,11 +186,11 @@ int U(){
 
 int Un(){
     for(i=0;i<3;i++){
-        yordamchi=o[i][2];
-        o[i][2]=w[i][2];
-        w[i][2]=r[i][2];
-        r[i][2]=y[i][2];
-        y[i][2]=yordamchi;
+        yordamchi=o[0][i];
+        o[0][i]=w[0][i];
+        w[0][i]=r[0][i];
+        r[0][i]=y[2][2-i];
+        y[2][2-i]=yordamchi;
     }
     yordamchi=g[0][0];
     g[0][0]=g[0][2];
@@ -203,13 +203,14 @@ int Un(){
     g[2][1]=g[1][0];
     g[1][0]=yordamchi;
 }
+
 int D(){
     for(i=0;i<3;i++){
-        yordamchi=r[i][2];
-        r[i][2]=y[i][2];
-        y[i][2]=o[i][2];
-        o[i][2]=w[i][2];
-        w[i][2]=yordamchi;
+        yordamchi=r[2][2-i];
+        r[2][2-i]=y[0][i];
+        y[0][i]=o[2][2-i];
+        o[2][2-i]=w[2][2-i];
+        w[2][2-i]=yordamchi;
     }
     yordamchi=b[0][0];
     b[0][0]=b[2][0];
@@ -225,11 +226,11 @@ int D(){
 
 int Dn(){
     for(i=0;i<3;i++){
-        yordamchi=r[i][2];
-        r[i][2]=w[i][2];
-        w[i][2]=o[i][2];
-        o[i][2]=y[i][2];
-        y[i][2]=yordamchi;
+        yordamchi=r[2][2-i];
+        r[2][2-i]=w[2][2-i];
+        w[2][2-i]=o[2][2-i];
+        o[2][2-i]=y[0][i];
+        y[0][i]=yordamchi;
     }
     yordamchi=b[0][0];
     b[0][0]=b[0][2];
@@ -253,8 +254,8 @@ int main(){
         }
         for(i=1;i<=3;i++){
             for(i2=1;i2<=3;i2++){
-                printf("o[%d][%d]=",i,i2);
-                scanf("%d",&o[i-1][i2-1]);
+                printf("g[%d][%d]=",i,i2);
+                scanf("%d",&g[i-1][i2-1]);
             }
         }
         for(i=1;i<=3;i++){
@@ -265,23 +266,29 @@ int main(){
         }
         for(i=1;i<=3;i++){
             for(i2=1;i2<=3;i2++){
-                printf("r[%d][%d]=",i,i2);
-                scanf("%d",&r[i-1][i2-1]);
-            }
-        }
-        for(i=1;i<=3;i++){
-            for(i2=1;i2<=3;i2++){
-                printf("g[%d][%d]=",i,i2);
-                scanf("%d",&g[i-1][i2-1]);
-            }
-        }
-        for(i=1;i<=3;i++){
-            for(i2=1;i2<=3;i2++){
                 printf("b[%d][%d]=",i,i2);
                 scanf("%d",&b[i-1][i2-1]);
             }
         }
-      
+        for(i=1;i<=3;i++){
+            for(i2=1;i2<=3;i2++){
+                printf("o[%d][%d]=",i,i2);
+                scanf("%d",&o[i-1][i2-1]);
+            }
+        }
+        for(i=1;i<=3;i++){
+            for(i2=1;i2<=3;i2++){
+                printf("r[%d][%d]=",i,i2);
+                scanf("%d",&r[i-1][i2-1]);
+            }
+        }
+
+        if((w[2][2]==1 || w[2][2]==2 || w[2][2]==5) && (o[2][0]==1 || o[2][0]==2 || o[2][0]==5) && (b[0][2]==1 || b[0][2]==2 || b[0][2]==5)){
+        while(g[2][2]!=5 && w[0][2]!=1 && o[0][0]!=2){
+            Dn(); Rn(); D(); R();
+            printf("D` R` D R "); 
+        }
+        }else if(o[2][2]==2 || y)
     }
     return 0;
 }
