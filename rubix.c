@@ -320,6 +320,53 @@ int main(){
             printf("\tD`");
         }
     }
+        
+    while(b[0][1]!=6 || b[1][0]!=6 || b[1][2]!=6 || b[2][1]!=6){
+        if(w[2][1]==1 && b[0][1]==2){
+            Dn(); Rn(); D(); R(); D(); F(); Dn(); Fn();
+            printf("D`  R`  D  R  D  F  D`  F`\n");
+            printf("\t");
+        }
+        if(w[2][1]==1 && b[0][1]==4){
+            D(); L(); Dn(); Ln(); Dn(); Fn(); D(); F();
+            printf("D  L  D`  L`  D`  F`  D  F\n");
+            printf("\t");
+        }
+        if(r[2][1]==4 && b[1][0]==1){
+            Dn(); Fn(); D(); F(); D(); L(); Dn(); Ln();
+            printf("D`  F`  D  F  D  L  D`  L`\n");
+            printf("\t");
+        }
+        if(r[2][1]==4 && b[1][0]==3){
+            D(); B(); Dn(); Bn(); Dn(); Ln(); D(); L(); 
+            printf("D  B  D`  B`  D`  L`  D  L\n");
+            printf("\t");
+        }
+        if(y[0][1]==3 && b[2][1]==4){
+            Dn(); Ln(); D(); L(); D(); B(); Dn(); Bn();
+            printf("D`  L`  D  L  D  B  D`  B`\n");
+            printf("\t");
+        }
+        if(y[0][1]==3 && b[2][1]==2){
+            D(); R(); Dn(); Rn(); Dn(); Bn(); D(); B();
+            printf("D  R  D`  R`  D`  B`  D  B\n");
+            printf("\t");
+        }
+        if(o[2][1]==2 && b[1][2]==3){
+            Dn(); Bn(); D(); B(); D(); R(); Dn(); Rn();
+            printf("D`  B`  D  B  D  R  D`  R`\n");
+            printf("\t");
+        }
+        if(o[2][1]==2 && b[1][2]==1){
+            D(); F(); Dn(); Fn(); Dn(); Rn(); D(); R();
+            printf("D  F  D`  F`  D`  R`  D  R\n");
+            printf("\t");
+        }
+        if(b[0][1]!=6 || b[1][0]!=6 || b[1][2]!=6 || b[2][1]!=6){
+            Dn();
+            printf("D`  ");
+            }
+        }
     }
     return 0;
 }
