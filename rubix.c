@@ -4,6 +4,8 @@
 int w[3][3],o[3][3],y[3][3],r[3][3],g[3][3],b[3][3];
 int i,i2,yordamchi;
 
+// movements
+
 int R(){
     for(i=0;i<3;i++){
         yordamchi=w[i][2];
@@ -245,7 +247,7 @@ int Dn(){
 }
 
 int main(){
-    int n;
+    int n,n2,n3=0;
     printf("\n\t\t\t\twhite----1\n\t\t\t\torange---2\n\t\t\t\tyellow---3\n\t\t\t\tred------4\n\t\t\t\tgreen----5\n\t\t\t\tblue-----6\n");
     while(1){
         for(i=1;i<=3;i++){
@@ -286,10 +288,22 @@ int main(){
         }
 
     printf("\n");
-    while(g[0][0]!=5 || g[0][2]!=5 || g[2][0]!=5 || g[2][2]!=5 || w[0][2]!=1 || o[0][0]!=2 || o[0][2]!=2 || y[2][2]!=3 || y[2][0]!=3 || r[0][0]!=4 || r[0][2]!=4 || w[0][0]!=1){
 
+    // stage1 starts from here
+
+    while(g[0][0]!=5 || g[0][2]!=5 || g[2][0]!=5 || g[2][2]!=5 || w[0][2]!=1 || o[0][0]!=2 || o[0][2]!=2 || y[2][2]!=3 || y[2][0]!=3 || r[0][0]!=4 || r[0][2]!=4 || w[0][0]!=1){
+        n2=0;
         if(((w[2][2]==1 || w[2][2]==2 || w[2][2]==5) && (o[2][0]==1 || o[2][0]==2 || o[2][0]==5) && (b[0][2]==1 || b[0][2]==2 || b[0][2]==5)) || ((w[0][2]==2 || w[0][2]==5) && (o[0][0]==1 || o[0][0]==5) && (g[2][2]==1 || g[2][2]==2))){
             n=0;
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             while(g[2][2]!=5 || w[0][2]!=1 || o[0][0]!=2){
                 Dn(); Rn(); D(); R();
                 n++;
@@ -299,6 +313,15 @@ int main(){
 
         if(((o[2][2]==2 || o[2][2]==3 || o[2][2]==5) && (y[0][2]==2 || y[0][2]==3 || y[0][2]==5) && (b[2][2]==2 || b[2][2]==3 || b[2][2]==5)) || ((o[0][2]==3 || o[0][2]==5) && (y[2][2]==2 || y[2][2]==5) && (g[0][2]==2 || g[0][2]==3))){
             n=0;
+             n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             while(o[0][2]!=2 || y[2][2]!=3 || g[0][2]!=5){
                 Dn(); Bn(); D(); B();
                 n++;
@@ -308,6 +331,15 @@ int main(){
 
         if(((y[0][0]==3 || y[0][0]==4 || y[0][0]==5) && (r[2][0]==3 || r[2][0]==4 || r[2][0]==5) && (b[2][0]==3 || b[2][0]==4 || b[2][0]==5)) || ((y[2][0]==4 || y[2][0]==5) && (r[0][0]==3 || r[0][0]==5) && (g[0][0]==3 || g[0][0]==4))){
             n=0;
+             n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             while(y[2][0]!=3 || r[0][0]!=4 || g[0][0]!=5){
                 Dn(); Ln(); D(); L();
                 n++;
@@ -317,6 +349,15 @@ int main(){
 
         if(((r[2][2]==4 || r[2][2]==1 || r[2][2]==5) && (w[2][0]==4 || w[2][0]==1 || w[2][0]==5) && (b[0][0]==4 || b[0][0]==1 || b[0][0]==5)) || ((r[0][2]==1 || r[0][2]==5) && (w[0][0]==4 || w[0][0]==5) && (g[2][0]==4 || g[2][0]==1))){
             n=0;
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             while(r[0][2]!=4 || w[0][0]!=1 || g[2][0]!=5){
                 Dn(); Fn(); D(); F();
                 n++;
@@ -324,49 +365,136 @@ int main(){
                 printf("\t%d ta ( D`  F`  D  F )\n",n);
         }
         if(g[0][0]!=5 || g[0][2]!=5 || g[2][0]!=5 || g[2][2]!=5){
+            if(n2==0){
             Dn();
-            printf("\tD`\n");
+            n3++;
+            }
         }
     }
         printf("\n");
+
+        // stage2 start from here
+    n3=0;
     while(w[1][0]!=1 || w[1][2]!=1 || o[1][0]!=2 || o[1][2]!=2 || r[1][0]!=4 || r[1][2]!=4 || y[1][0]!=3 || y[1][2]!=3){
+        n2=0;
         if(w[2][1]==1 && b[0][1]==2){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             Dn(); Rn(); D(); R(); D(); F(); Dn(); Fn();
             printf("\tD`  R`  D  R  D  F  D`  F`\n");
         }
         if(w[2][1]==1 && b[0][1]==4){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             D(); L(); Dn(); Ln(); Dn(); Fn(); D(); F();
             printf("\tD  L  D`  L`  D`  F`  D  F\n");
         }
         if(r[2][1]==4 && b[1][0]==1){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             Dn(); Fn(); D(); F(); D(); L(); Dn(); Ln();
             printf("\tD`  F`  D  F  D  L  D`  L`\n");
         }
         if(r[2][1]==4 && b[1][0]==3){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             D(); B(); Dn(); Bn(); Dn(); Ln(); D(); L(); 
             printf("\tD  B  D`  B`  D`  L`  D  L\n");
         }
         if(y[0][1]==3 && b[2][1]==4){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             Dn(); Ln(); D(); L(); D(); B(); Dn(); Bn();
             printf("\tD`  L`  D  L  D  B  D`  B`\n");
         }
         if(y[0][1]==3 && b[2][1]==2){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             D(); R(); Dn(); Rn(); Dn(); Bn(); D(); B();
             printf("\tD  R  D`  R`  D`  B`  D  B\n");
         }
         if(o[2][1]==2 && b[1][2]==3){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             Dn(); Bn(); D(); B(); D(); R(); Dn(); Rn();
             printf("\tD`  B`  D  B  D  R  D`  R`\n");
         }
         if(o[2][1]==2 && b[1][2]==1){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            n3=0;
             D(); F(); Dn(); Fn(); Dn(); Rn(); D(); R();
             printf("\tD  F  D`  F`  D`  R`  D  R\n");
         }
         if(w[1][0]!=1 || w[1][2]!=1 || o[1][0]!=2 || o[1][2]!=2 || r[1][0]!=4 || r[1][2]!=4 || y[1][0]!=3 || y[1][2]!=3){
-            Dn();
-            printf("\tD`\n");            
-            }
+        if(n2==0){
+                Dn();
+                n3++;
+                if(n3==4){
+                    Dn(); Rn(); D(); R(); D(); F(); Dn(); Fn();
+                    printf("\tD`  R`  D  R  D  F  D`  F`\n");
+                }
+            }    
         }
     }
+
+    // stage3 starts from here
+
+}
     return 0;
 }
