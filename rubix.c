@@ -368,6 +368,10 @@ int main(){
             if(n2==0){
             Dn();
             n3++;
+            if(n3==4){
+                Dn(); Fn(); D(); F();
+                printf("\tD`  F`  D  F\n");
+            }
             }
         }
     }
@@ -494,6 +498,35 @@ int main(){
     }
 
     // stage3 starts from here
+
+    while(b[0][1]!=6 || b[1][0]!=6 || b[1][2]!=6 || b[2][1]!=6){
+        if(b[1][0]==6 && b[1][2]==6){
+            F(); L(); D(); Ln(); Dn(); Fn();
+            printf("\tF  L  D  L`  D`  F`\n");
+        }else if(b[0][1]==6 && b[2][1]==6){
+            L(); B(); D(); Bn(); Dn(); Ln();
+            printf("\tL  B  D  B`  D`  L`\n");
+        }else if(b[1][2]==6 && b[2][1]==6){
+            F(); L(); D(); Ln(); Dn(); L(); D(); Ln(); Dn(); Fn();
+            printf("\tF  L  D  L`  D`\n\tL  D  L`  D`  F`\n");
+        }else if(b[0][1]==6 && b[1][2]==6){
+            L(); B(); D(); Bn(); Dn(); B(); D(); Bn(); Dn(); Ln();
+            printf("\tL  B  D  B`  D`\n\tB  D  B`  D`  L`\n");
+        }else if(b[0][1]==6 && b[1][0]==6){
+            B(); R(); D(); Rn(); Dn(); R(); D(); Rn(); Dn(); Bn();
+            printf("\tB  R  D  R`  D`\n\tR  D  R`  D`  B`\n");
+        }else if(b[1][0]==6 && b[2][1]==6){
+            R(); F(); D(); Fn(); Dn(); F(); D(); Fn(); Dn(); Rn();
+            printf("\tR  F  D  F`  D`\n\tF  D  F`  D`  R`\n");
+        }else{
+            F(); L(); D(); Ln(); Dn(); L(); D(); Ln(); Dn(); Fn(); D(); F(); L(); D(); Ln(); Dn(); Fn();
+            printf("\tF  L  D  L`  D`\n\tL  D  L`  D`  F`\n");
+            printf("\tD  F  L  D  L`  D`  F`\n");
+        }
+    }
+
+    // stage4 starts from here 
+
 
 }
     return 0;
