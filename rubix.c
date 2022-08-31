@@ -622,6 +622,43 @@ int main(){
     }
 
     // stage5 starts from here
+    n3=0;
+    while(w[2][0]!=1 || w[2][2]!=1 || o[2][0]!=2 || o[2][2]!=2 || r[2][0]!=4 || r[2][2]!=4 || y[0][0]!=3 || y[0][2]!=3){
+        if(w[2][0]==w[2][2] && o[2][0]!=o[2][2] && r[2][0]!=r[2][2] && y[0][0]!=y[0][2]){
+        if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+        n3=0;
+        L(); Bn(); L(); F(); F(); Ln(); B(); L(); F(); F(); L(); L();
+        printf("\tL  B`  L  F  F  L`  B  L  F  F  L  L\n"); 
+        }
+
+        if(n3==4){
+        L(); Bn(); L(); F(); F(); Ln(); B(); L(); F(); F(); L(); L();
+        printf("\tL  B`  L  F  F  L`  B  L  F  F  L  L\n");
+        n3=0;
+        }
+
+        if(w[2][0]!=1 || w[2][2]!=1 || o[2][0]!=2 || o[2][2]!=2 || r[2][0]!=4 || r[2][2]!=4 || y[0][0]!=3 || y[0][2]!=3){
+            Dn();
+            n3++;
+        }
+    }
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+
+    // stage6 starts from here
+
+    
 
 }
     return 0;
