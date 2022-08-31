@@ -526,7 +526,102 @@ int main(){
     }
 
     // stage4 starts from here 
+    n2=0; n3=0;
+    while(b[0][0]!=6 || b[0][2]!=6 || b[2][0]!=6 || b[2][2]!=6){
+        if(b[0][0]==6 && o[2][0]==6 && y[0][2]==6 && r[2][0]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            // algorithm 6
+            Ln(); D(); D(); L(); D(); Ln(); D(); L();               
+            printf("\tL`  2D  L  D  L`  D  L\n");
+        }else if(b[0][0]==6 && w[2][2]==6 && o[2][2]==6 && y[0][0]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            // algorithm 7
+            Dn(); L(); Dn(); Dn(); Ln(); Dn(); L(); Dn(); Ln();
+            printf("\tD`  L  2D`  L`  D`  L  D`  L`\n");
+        }else if(b[0][2]==6 && b[2][0]==6 && y[0][2]==6 && r[2][2]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            Ln(); D(); D(); L(); D(); Ln(); D(); L(); Dn(); L(); Dn(); Dn(); Ln(); Dn(); L(); Dn(); Ln();
+            printf("\tL`  2D  L  D  L`  D  L\n");
+            printf("\tD`  L  2D`  L`  D`  L  D`  L`\n");
+        }else if(w[2][2]==6 && w[2][0]==6 && y[0][2]==6 && y[0][0]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            Ln(); D(); D(); L(); D(); Ln(); Dn(); L(); D(); Ln(); D(); L(); 
+            printf("\tL`  2D  L  D  L`  D`\n");
+            printf("\tL  D  L`  D  L\n");
+        }else if(b[0][2]==6 && b[2][2]==6 && w[2][0]==6 && y[0][0]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            Dn(); L(); Dn(); Dn(); Ln(); Dn(); L(); Dn(); Ln(); Ln(); D(); D(); L(); D(); Ln(); D(); L();
+            printf("\tD`  L  2D`  L`  D`  L  D`  L`\n");
+            printf("\tL`  2D  L  D  L`  D  L\n");
+        }else if(w[2][0]==6 && w[2][2]==6 && o[2][2]==6 && r[2][0]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            Ln(); D(); D(); L(); D(); Ln(); D(); L(); Dn(); Ln(); D(); D(); L(); D(); Ln(); D(); L();               
+            printf("\tL`  2D  L  D  L`  D  L  D`\n");
+            printf("\tL`  2D  L  D  L`  D  L\n");
+        }else if(w[2][0]==6 && w[2][2]==6 && b[2][0]==6 && b[2][2]==6){
+            n2=1;
+            if(n3==2){
+                printf("\t%dD`\n",n3);
+            }else if(n3==1){
+                printf("\tD`\n");
+            }else if(n3==3){
+                printf("\tD\n");
+            }
+            Dn(); L(); Dn(); Dn(); Ln(); Dn(); L(); Dn(); Ln(); D(); D(); Ln(); D(); D(); L(); D(); Ln(); D(); L();
+            printf("\tD`  L  2D`  L`  D`  L  D`  L`  2D\n");
+            printf("\tL`  2D  L  D  L`  D  L\n");
+        }
+        if(b[0][0]!=6 || b[0][2]!=6 || b[2][0]!=6 || b[2][2]!=6){
+            if(n2==0){
+                Dn();
+                n3++;
+            }
+        }
+    }
 
+    // stage5 starts from here
 
 }
     return 0;
