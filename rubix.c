@@ -710,7 +710,8 @@ int main(){
         }
     }
 
-    
+printf("\n\n\t=======RUBIK`S CUBE SOLVED!=======\n\n");
+
 }
     return 0;
 }
