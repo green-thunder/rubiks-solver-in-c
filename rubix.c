@@ -658,6 +658,7 @@ int main(){
 
     // stage6 starts from here
 
+    if(w[2][1]!=1 || o[2][1]!=2 || r[2][1]!=4 || y[0][1]!=3){
     if(y[0][1]==3){
         if(w[2][1]==4 && r[2][1]==2 && o[2][1]==1){
             L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L();
@@ -709,7 +710,7 @@ int main(){
             printf("\tF  F  D  F  D  F`  D`  F`  D`  F`  D  F`\n");
         }
     }
-
+    }
 printf("\n\n\t=======RUBIK`S CUBE SOLVED!=======\n\n");
 
 }
