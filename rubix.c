@@ -248,7 +248,8 @@ int Dn(){
 
 int main(){
     int n,n2,n3=0;
-    printf("\n\t\t\t\twhite----1\n\t\t\t\torange---2\n\t\t\t\tyellow---3\n\t\t\t\tred------4\n\t\t\t\tgreen----5\n\t\t\t\tblue-----6\n");
+    printf("\n\t\t\t=======RUBIK`S CUBE SOLVER=======\n");
+    printf("\n\t\t\t\twhite----1\n\t\t\t\t       orange---2\n\t\t\t\tyellow---3\n\t\t\t\tred------4\n\t\t\t\tgreen----5\n\t\t\t\tblue-----6\n");
     while(1){
         for(i=1;i<=3;i++){
             for(i2=1;i2<=3;i2++){
