@@ -663,25 +663,30 @@ int main(){
         if(w[2][1]==4 && r[2][1]==2 && o[2][1]==1){
             L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L();
             printf("\tL  D`  L  D  L  D  L  D`  L`  D`  L  L\n");
+            break;
         }else{
             L(); L(); D(); L(); D(); Ln(); Dn(); Ln(); Dn(); Ln(); D(); Ln(); 
             printf("\tL  L  D  L  D  L`  D`  L`  D`  L`  D  L`\n");
+            break;
         }
     }
     if(w[2][1]==3 && r[2][1]==2){
         L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L(); D(); L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L(); Dn(); 
         printf("\tL  D`  L  D  L  D  L  D`  L`  D`  L  L  D\n");
         printf("\tL  D`  L  D  L  D  L  D`  L`  D`  L  L  D`\n");
+        break;
     }
     if(w[2][1]==4 && o[2][1]==3){
         L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L(); Dn(); L(); Dn(); L(); D(); L(); D(); L(); Dn(); Ln(); Dn(); L(); L(); D(); 
         printf("\tL  D`  L  D  L  D  L  D`  L`  D`  L  L  D`\n");
         printf("\tL  D`  L  D  L  D  L  D`  L`  D`  L  L  D\n");
+        break;
     }
     if(o[2][1]==2){
         if(r[2][1]==3 && y[0][1]==1 && w[2][1]==4){
             B(); Dn(); B(); D(); B(); D(); B(); Dn(); Bn(); Dn(); B(); B();
             printf("\tB  D`  B  D  B  D  B  D`  B`  D`  B  B\n");
+            break;
         }else{
             B(); B(); D(); B(); D(); Bn(); Dn(); Bn(); Dn(); Bn(); D(); Bn();
             printf("\tB  B  D  B  D  B`  D`  B`  D`  B`  D  B`\n");
@@ -691,23 +696,28 @@ int main(){
         B(); Dn(); B(); D(); B(); D(); B(); Dn(); Bn(); Dn(); B(); B(); Dn(); B(); Dn(); B(); D(); B(); D(); B(); Dn(); Bn(); Dn(); B(); B(); D();
         printf("\tB  D`  B  D  B  D  B  D`  B`  D`  B  B  D`\n");
         printf("\tB  D`  B  D  B  D  B  D`  B`  D`  B  B  D\n");
+        break;
     }
     if(w[2][1]==1){
         if(y[0][1]==2 && o[2][1]==4 && r[2][1]==3){
             R(); Dn(); R(); D(); R(); D(); R(); Dn(); Rn(); Dn(); R(); R();
             printf("\tR  D`  R  D  R  D  R  D`  R`  D`  R  R\n");
+            break;
         }else{
             R(); R(); D(); R(); D(); Rn(); Dn(); Rn(); Dn(); Rn(); D(); Rn(); 
             printf("\tR  R  D  R  D  R`  D`  R`  D`  R`  D  R`\n");
+            break;
         }
     }
     if(r[2][1]==4){
         if(o[2][1]==1 && w[2][1]==3 && y[0][1]==2){
             F(); Dn(); F(); D(); F(); D(); F(); Dn(); Fn(); Dn(); F(); F();
             printf("\tF  D`  F  D  F  D  F  D`  F`  D`  F  F\n");
+            break;
         }else{
             F(); F(); D(); F(); D(); Fn(); Dn(); Fn(); Dn(); Fn(); D(); Fn(); 
             printf("\tF  F  D  F  D  F`  D`  F`  D`  F`  D  F`\n");
+            break;
         }
     }
     }
